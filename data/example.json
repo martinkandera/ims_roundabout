@@ -1,0 +1,361 @@
+{
+  "metadata": {
+    "name": "example",
+    "author": "author",
+    "date": "2025-01-01",
+    "location": "example location"
+  },
+  "visualization": {
+    "grid_width": 12,
+    "grid_height": 10,
+    "time_step": 0,
+    "collect_data": "100"
+
+
+  },
+  "connections_in": [0, 1, 2],
+  "connections_out": [0, 1, 2],
+  "nodes": [
+    {
+      "id": 1,
+      "positon_x": 1,
+      "position_y": 4,
+      "type": "despawn",
+      "direction": 1
+    },
+    {
+      "id": 2,
+      "positon_x": 1,
+      "position_y": 5,
+      "type": "spawn",
+      "connects_to": [
+        {
+          "id": 4,
+          "priority": 0
+        }
+      ],
+      "from_spawn": 0,
+      "direction": [1, 2]
+    },
+    {
+      "id": 3,
+      "positon_x": 2,
+      "position_y": 4,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 1,
+          "priority": 0
+        }
+      ],
+      "direction": [0]
+    },
+    {
+      "id": 4,
+      "positon_x": 2,
+      "position_y": 5,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 6,
+          "priority": 0
+        }
+      ],
+      "direction": [1, 2]
+    },
+    {
+      "id": 5,
+      "positon_x": 3,
+      "position_y": 4,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 3,
+          "priority": 0
+        }
+      ],
+      "direction": [0]
+    },
+    {
+      "id": 6,
+      "positon_x": 3,
+      "position_y": 5,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 8,
+          "priority": 0
+        }
+      ],
+      "direction": [1, 2]
+    },
+    {
+      "id": 7,
+      "positon_x": 4,
+      "position_y": 4,
+      "type": "merge",
+      "connects_to": [
+        {
+          "id": 5,
+          "priority": 0
+        }
+      ],
+      "direction": [0]
+    },
+    {
+      "id": 8,
+      "positon_x": 4,
+      "position_y": 5,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 10,
+          "priority": 0
+        }
+      ],
+      "direction": [1, 2]
+    },
+    {
+      "id": 9,
+      "positon_x": 5,
+      "position_y": 4,
+      "type": "cross",
+      "connects_to": [
+        {
+          "id": 7,
+          "priority": 1,
+          "direction": [0]
+        },
+        {
+          "id": 12,
+          "priority": 0,
+          "direction": [1]
+        }
+      ],
+      "conditions": [
+        {
+          "if_from": 19,
+          "continue_to": 12
+        },
+        {
+          "if_from": 11,
+          "continue_to": 7
+        }
+      ],
+      "direction": [0, 2]
+    },
+    {
+      "id": 10,
+      "positon_x": 5,
+      "position_y": 5,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 12,
+          "priority": 1
+        },
+        {
+          "id": 11,
+          "priority": 0
+        }
+      ],
+      "direction": [1, 2]
+    },
+    {
+      "id": 11,
+      "positon_x": 6,
+      "position_y": 4,
+      "type": "cross",
+      "connects_to": [
+        {
+          "id": 9,
+          "priority": 1,
+          "direction": [0]
+        },
+        {
+          "id": 20,
+          "priority": 0,
+          "direction": [2]
+        }
+      ],
+      "conditions": [
+        {
+          "if_from": 10,
+          "continue_to": 20
+        },
+        {
+          "if_from": 13,
+          "continue_to": 9
+        }
+      ],
+      "direction": [0, 2]
+    },
+    {
+      "id": 12,
+      "positon_x": 6,
+      "position_y": 5,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 14,
+          "priority": 0
+        }
+      ],
+      "direction": [1]
+    },
+    {
+      "id": 13,
+      "positon_x": 7,
+      "position_y": 4,
+      "type": "cross",
+      "connects_to": [
+        {
+          "id": 11,
+          "priority": 1
+        },
+        {
+          "id": 20,
+          "priority": 1
+        }
+      ],
+      "direction": [0, 2]
+    },
+    {
+      "id": 14,
+      "positon_x": 7,
+      "position_y": 5,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 16,
+          "priority": 0
+        }
+      ],
+      "direction": [1]
+    },
+    {
+      "id": 15,
+      "positon_x": 8,
+      "position_y": 4,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 13,
+          "priority": 0
+        }
+      ],
+      "direction": [0, 2]
+    },
+    {
+      "id": 16,
+      "positon_x": 8,
+      "position_y": 5,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 18,
+          "priority": 0
+        }
+      ],
+      "direction": [1]
+    },
+    {
+      "id": 17,
+      "positon_x": 9,
+      "position_y": 4,
+      "type": "spawn",
+      "connects_to": [
+        {
+          "id": 15,
+          "priority": 0
+        }
+      ],
+      "from_spawn": 1,
+      "direction": [0, 2]
+    },
+    {
+      "id": 18,
+      "positon_x": 9,
+      "position_y": 5,
+      "type": "despawn",
+      "direction": 1
+    },
+    {
+      "id": 19,
+      "positon_x": 5,
+      "position_y": 3,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 9,
+          "priority": 0
+        },
+        {
+          "id": 7,
+          "priority": 0
+        }
+      ],
+      "direction": [0, 1]
+    },
+    {
+      "id": 20,
+      "positon_x": 6,
+      "position_y": 3,
+      "type": "merge",
+      "connects_to": [
+        {
+          "id": 22,
+          "priority": 0
+        }
+      ],
+      "direction": [2]
+    },
+    {
+      "id": 21,
+      "positon_x": 5,
+      "position_y": 2,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 19,
+          "priority": 0
+        }
+      ],
+      "direction": [0, 1]
+    },
+    {
+      "id": 22,
+      "positon_x": 6,
+      "position_y": 2,
+      "type": "road",
+      "connects_to": [
+        {
+          "id": 24,
+          "priority": 0
+        }
+      ],
+      "direction": [2]
+    },
+    {
+      "id": 23,
+      "positon_x": 5,
+      "position_y": 1,
+      "type": "spawn",
+      "connects_to": [
+        {
+          "id": 21,
+          "priority": 0
+        }
+      ],
+      "from_spawn": 2,
+      "direction": [0, 1]
+    },
+    {
+      "id": 24,
+      "positon_x": 6,
+      "position_y": 1,
+      "type": "despawn",
+      "direction": 2
+    }
+  ]
+}
